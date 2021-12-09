@@ -1,12 +1,52 @@
 <center><h1>An in-depth look into NYC open restaurant applications</h1></center>
 <center><h2>By Carlos Genis</h2></center>
+<img src="open-restaurants-application.jpg" alt= "Requirements for outdoor dining" width= "500" height="300"><br>
 <a href="https://data.cityofnewyork.us/Transportation/Open-Restaurant-Applications/pitm-atqc/data">Link to dataset</a><br>
 <a href=https://github.com/CarlosGenis/FinalProject>Link to Github repo</a><br>
+<h2>Overview: </h2>
+<p>My objective for this project was to find how many open resturant applications were approved in NYC. An open resturant applications is applying for permission to seat customers outside due to the COVID-19 pandemic. The question I looked to answer for this project was, did more restaurants receive permission for outdoor dining? I used the pandas librabry to create dataframes and filter the data</p>
 <h2>My research results: </h2>
 <p>Total applications submitted: 13001</p>
 <p>Sidewalk Seating Application Results: yes 10963 no 2038</p>
 <p>Percentage of sidewalk seating applications approved: 84.32 %</p>
-<p>Roadwalk Seating Application Results:  yes 8335 no 4666</p>
-<p>Percentage of roadwalk seating applications approved: 64.11 %</p>
-<h2>Screenshot of terminal compiling: </h2>
-<img src="image.png" alt= "Compiler" width= "500" height="300">
+<p>Roadway Seating Application Results:  yes 8335 no 4666</p>
+<p>Percentage of roadway seating applications approved: 64.11 %</p>
+<h2>Research results categorized by borough: </h2>
+<b>Queens:</b><br>
+<p>Total applications submitted: 2564</p>
+<p>Sidewalk Seating Application Results: yes 2275 no 289</p>
+<p>Percentage of sidewalk seating applications approved: 88.73%</p>
+<p>Roadway Seating Application Results: yes 1601 no 963</p>
+<p>Percentage of roadway seating applications approved: 62.44%</p>
+<b>Manhattan:</b><br>
+<p>Total applications submitted: 6351</p>
+<p>Sidewalk Seating Application Results: yes 5187 no 1164</p>
+<p>Percentage of sidewalk seating applications approved: 81.67%</p>
+<p>Roadway Seating Application Results: yes 4176 no 2175</p>
+<p>Percentage of roadway seating applications approved: 65.75%</p>
+<b>Brooklyn:</b><br>
+<p>Total applications submitted: 3189</p>
+<p>Sidewalk Seating Application Results: yes 2675 no 514</p>
+<p>Percentage of sidewalk seating applications approved: 83.88%</p>
+<p>Roadway Seating Application Results: yes 2060 no 1129</p>
+<p>Percentage of roadway seating applications approved: 64.6%</p>
+<b>The Bronx:</b><br>
+<p>Total applications submitted: 700</p>
+<p>Sidewalk Seating Application Results: yes 648 no 52</p>
+<p>Percentage of sidewalk seating applications approved: 92.57%</p>
+<p>Roadway Seating Application Results: yes 402 no 298</p>
+<p>Percentage of roadway seating applications approved: 57.43%</p>
+<b>Staten Island:</b><br>
+<p>Total applications submitted: 197</p>
+<p>Sidewalk Seating Application Results: yes 178 no 19</p>
+<p>Percentage of sidewalk seating applications approved: 90.36%</p>
+<p>Roadway Seating Application Results: yes 96 no 101</p>
+<p>Percentage of roadway seating applications approved: 48.73%</p>
+<h2>Data Section:</h2>
+<p>Queens ranked 3rd on number of applications submitted. Permission for either sidewalk or roadway seating had over a 50% approval rate. </p>
+<p>Manhattan had the most applications submitted with 6351! Permission for either sidewalk or roadway seating had over a 50% approval rate. Manhattan had the highest percentage of roadway seating applications approved, with 64.6%</p>
+<p>Brooklyn had the second most applications submitted with 3189. Permission for either sidewalk or roadway seating had over a 50% approval rate.</p>
+<p>The Bronx had the second least applications submitted with only 700. Permission for either sidewalk or roadway seating had over a 50% approval rate. The Bronx has the highest percentage of sidewalk seating applications approved with 92.57%</p>
+<p>Staten Island only had 197 applications filled out, ranking the lowest out of the five boroughs. Over 90% of applications for sidwalk seating were approved, the second highest in NYC! However, only 48.73% of applications for roadway seating were approved. This is the lowest percentage in all of NYC</p>
+<h2>How was the data collected? </h2>
+<p>I first used the pandas library to create a dataframe to hold the data for the open resturant applications. I then used shape with an index of 0 to get all of the rows in the dataset (this would represent how many applications were filled out). I used value_counts to count all values for when there was an approval/denial for sidewalk/roadway seating. I calculated percentages by dividing the number from value_counts by the total applications. I then multiplied that number by 100 and rounded to 2 decimal places to make it easier to read. To get the results for each borough, I created 5 new variables, one for each borough. I then linked the vriable to the original dataframe and used loc to find where all instances of a certain borough appeared. I then repeated the same proccess as I had done for the original dataset. </p>
